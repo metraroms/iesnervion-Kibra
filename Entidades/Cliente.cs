@@ -1,6 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Entidades;
+
+// Esto es un cambio tonto solo para ver si esto chuta
+
 /*
     CREATE TABLE Clientes(
 	    idCliente INT NOT NULL,
@@ -18,6 +21,8 @@ namespace Entidades
 {
     public class Cliente
     {
+        public virtual String HOLA = "HOLA MUNDO";
+
         #region "Campos privados y propiedades públicas"
 
         private int _IdCliente;
