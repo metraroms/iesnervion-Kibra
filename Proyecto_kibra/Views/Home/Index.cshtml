@@ -1,0 +1,46 @@
+﻿@model Proyecto_kibra.Models.LoginModel
+@{
+    Layout = null;
+}
+
+<!-- Esta es la pagina de login -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login </title>
+
+    <link rel="stylesheet" href="~/Resources/css/reset.css">
+
+    <link rel="stylesheet" href="~/Resources/css/style.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="avatar">
+            <img src="~/Resources/images/radiation.png">
+        </div>
+        @using(Html.BeginForm()){
+        @Html.TextBoxFor(model => model.login.Usuario, new { @placeholder = "username",@required="required" })
+        <!--<input type="text" placeholder="username" name="user" required>-->
+        <div class="bar">
+            <i></i>
+        </div>
+        @Html.PasswordFor(model => model.login.Passwd, new { @placeholder = "password",@required="required" })
+        <!--<input type="password" placeholder="password" name="passwd" required>-->
+        <a href="#" class="forgot_link">forgot ?</a>
+            <div><p class="error_message">@Model.ErrorMessage</p></div>
+        <input type="submit" vlue="Sign in"/>
+        }
+    </div>
+
+    <script src="~/Resources/js/index.js"></script>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+</head>
+<body>
+    <div>
+        @{
+           Entidades.Login l = (Entidades.Login)Session["usuario"];
+            <table> 
+                <tr>
+                    <td>DNI</td><td>@l.Empleado.DniEmp</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td><td>@l.Empleado.NombreEmp</td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td><td>@l.Empleado.ApellidoEmp</td>
+                </tr>
+                <tr>
+                    <td>Email</td><td>@l.Empleado.EmailEmp</td>
+                </tr>
+                <tr>
+                    <td>Fecha Nacimiento</td><td>@l.Empleado.FechaNac</td>
+                </tr>
+                <tr>
+                    <td>Telefono</td><td>@l.Empleado.TelefonoEmp</td>
+                </tr>
+                <tr>
+                    <td>Direccion</td><td>@l.Empleado.DireccionEmp</td>
+                </tr>
+                <tr>
+                    <td>Ciudad</td><td>@l.Empleado.CiudadEmp.NombreCiu</td>
+                </tr>
+                <tr>
+                    <td>Provincia</td><td>@l.Empleado.CiudadEmp.Provincia.NombreProv</td>
+                </tr>
+                <tr>
+                    <td>NombrePue</td><td>@l.Empleado.PuestoEmp.NombrePue</td>
+                </tr>
+                <tr>
+                    <td>Salario</td><td>@l.Empleado.PuestoEmp.Salario</td>
+                </tr>
+                <tr>
+                    <td>Departamento</td><td>@l.Empleado.DepartamentoEmp.NombreDep</td>
+                </tr>
+                <tr>
+                    <td>Privilegio</td><td>@l.Privilegios[0].NombrePriv</td>
+                </tr>
+            </table>
+            
+        }
+    </div>
+</body>
+</html>
+
